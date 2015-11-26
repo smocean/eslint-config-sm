@@ -18,7 +18,19 @@ win: `C:\Users\用户名`
    "extends": "sm"
 }
 ```
-
+如果有些规则不适用你的项目，可在你项目下新建`.eslintrc` 文件，对相应规则进行覆盖即可，比如eslint for sm 中的规则 strict默认为function即在函数范围内添加`use strict`, 那么在node环境中可能不太适用，可改为global全局模式
+```json
+{
+    "extends": "sm",
+    "globals": {
+        "$": true,
+        "__dirname": true
+    },
+    "rules": {
+        strict: [2, 'global']
+    }
+}
+```
 
 按照此方法，你也可以在此基础上定制适合你自己项目的规则
 
@@ -39,6 +51,13 @@ win: `C:\Users\用户名`
     "user": {
         "debug": true,
         ...
+        "linters": {
+            "eslint": {
+                ...
+                "excludes": ["*.html"]
+            }
+        },
+        ...
         "paths": {
             ....
             "osx": [
@@ -53,59 +72,35 @@ win: `C:\Users\用户名`
 }
 ```
 
-重启 sublime text    `command + q`
+重启 Sublime Text 
 
 
 ## Tips ##
-Eslint 提供了自动修复的命令行 `eslint --fix`,
+* 直接在命令行执行如下命令
+    Eslint 提供了自动修复的命令行 `eslint --fix`,
 
 ```javascript
     eslint --fix file.js [file.js] [dir]
 ```
 
+* 另外可在Sublime Text中通过Build New System方式，在sublime text执行命令行。
+`Tools->Build System->New Build System...`，在新建的脚本文件中
+添加以下代码，保持为`eslint.sublime-build`到默认位置。然后运行`cmd+b`(mac) 或 `ctrl+b`(win) 即可。
 
-
-## Changelog ##
-### Stylistic 问题 2015-10-16 17:56 ###
-1. block-spacing 数组中多个对象的换行（空格）(多行用缩进规定) 
-2. camelcase 对象属性 是否带有下划线 properties never (已改)
-3. indent 前端规范添加多个变量定义，第一个之后与第一个对齐 @fxn
-4. lines-around-comment (已改)
-5. newline-after-var (已改)
-6. no-inline-comment (已改)
-7. no-restricted-syntax(已改 eval 没有找到能限制的)
-8. one-var （暂时不修改，试用后再决定)
-9. 如果key为数字要加引号 （添加)
-10. quotes 嵌套引号最外层是单引号还是双引号 (已改，嵌套引号最外层也是单引号)
-11. space-unary-ops 规范添加对一元操作符的约定 @fxn
-12. spaced-comment （已改，添加)
-13. var 后加空行更新文档 @fxn 
-
-### Possible Errors 问题 2015-10-18 16:46 ###
-1. comma-dangle 是不是要执行，暂时加入，试用后再决定是否添加。
-2. no-console,no-debugger  用于生产环境，以后再加
-3. no-irregular-whitespace 待lxk测试 (lxk)
-4. no-obj-calls 待lxk测试验证 (lxk)
-5. no-unexpected-multiline 待lxk测试验证 (lxk)
-
-### Variables 问题 2015-10-18 16:46 ###
-1. no-shadow 待lxk测试验证 (lxk) 暂时去掉（自定义scroll 和 close）
-2. no-undefined 待lxk测试验证 (lxk)
-
-### Best Practices 问题 2015-10-19 23:42 ###
-1. curly 待验证 （lxk)
-2. dot-location 非链式使用单行，多行的话是否有缩进 (lxk)
-3. no-alert 级别2放在生产环境下
-4. no-extend-native native object 如果已扩展，验证调用时该规则是否起作用 (lxk)
-5. no-fallthrough  (lxk)
-6. no-loop-func 验证闭包形式 (lxk)
-7. no-multi-spaces 该规则是否与其它规则冲突 (lxk)
-
-### 试用问题列表 ###
-1. no-undef 将Zepto 添加到globals (lxk) 2015-10-23 16:10
-2. lines-around-comment (removed lxk) 2015-11-01 19:43
-3. new-cap (set capIsNew false, e.g. $.Deffer lxk) 2015-11-01 19:55
-4. no-trailing-spaces 跳过空行处理 lxk
-5. 字符串拼接缩进问题 array join 暂无解
-6. use strict 范围 function lxk
+mac：
+```json
+    {
+        "cmd": ["eslint --fix $file"],
+        "shell": true,
+        "path": "/usr/local/node/v0.12.7/bin"
+    }
+```
+window：
+```json
+    {
+        "cmd": ["eslint", "--fix", "$file"],
+        "shell": true
+    }
+```
+`注`：path为eslint路径，window 平台下 path：`%APPDATA%\\Roaming\\npm`，如果该路径已经在系统环境变量中，则可省略，具体可根据实际情况进行相应调整
 
