@@ -59,5 +59,6 @@ restart sublime text `(command+q)`
 
 ## 4.  Eslint rules for *SM* changelog ##
 
-remove 'no-inline-comments' rule in version 0.1.6
+
+remove 'no-inline-comments' rule in eslint-config-sm 0.1.6
 
