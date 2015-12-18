@@ -57,4 +57,7 @@ Edit configuration `Preferences->Package Settings->SublimeLinter->Settings - Use
 
 restart sublime text `(command+q)`
 
+## 4.  Eslint rules for *SM* changelog ##
+
+remove 'no-inline-comments' rule in version 0.1.6
 
