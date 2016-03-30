@@ -6,5 +6,6 @@ module.exports = {
         'eslint-config-sm/lib/variables',
         'eslint-config-sm/lib/best',
         'eslint-config-sm/lib/stylistic'
+        
     ]
 };
