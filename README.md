@@ -18,17 +18,10 @@ win: `C:\Users\用户名`
    "extends": "sm"
 }
 ```
-如果有些规则不适用你的项目，可在你项目下新建`.eslintrc` 文件，对相应规则进行覆盖即可，比如eslint for sm 中的规则 strict默认为function即在函数范围内添加`use strict`, 那么在node环境中可能不太适用，可改为global全局模式
+在node环境：
 ```json
 {
-    "extends": "sm",
-    "globals": {
-        "$": true,
-        "__dirname": true
-    },
-    "rules": {
-        strict: [2, 'global']
-    }
+    "extends": "sm/node-config"
 }
 ```
 
