@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-sm",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "description": "eslint config for sm, base on eslint v2.7",
   "main": "index.js",
   "scripts": {
