@@ -1,20 +1,26 @@
 {
   "name": "eslint-config-sm",
-  "version": "0.1.21",
-  "description": "eslint config for sm, base on eslint v2.7",
+  "version": "1.0.0",
+  "description": "ESLint config for sm.cn, base on ESLint v3.7.0",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/smocean/eslint-config-sm.git"
+  },
   "keywords": [
-    "eslint",
-    "eslintconfig"
+    "ESLint Config",
+    "ESLint Config for sm.cn"
   ],
   "author": [
     "shuyu.mao",
-    "xuena.feng",
-    "xiaokang.li"
+    "xuena.feng"
   ],
-  "license": "ISC",
-  "dependencies": {}
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/smocean/eslint-config-sm/issues"
+  },
+  "homepage": "https://github.com/smocean/eslint-config-sm#readme"
 }
