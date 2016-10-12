@@ -88,7 +88,7 @@ module.exports = {
         'keyword-spacing': ['error', {before: true, after: true}],
         'linebreak-style': ['error', 'unix'],
         'new-cap': ['error', {capIsNew: false}],
-        'newline-after-var': ['error', 'always'],
+        // 'newline-after-var': ['error', 'always'],
         'no-array-constructor': ['error'],
         'no-multiple-empty-lines': ['error', {max: 1, maxBOF: 1, maxEOF: 1}],
         'no-new-object': ['error'],
