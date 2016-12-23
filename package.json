@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-sm",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "ESLint config for sm.cn, base on ESLint v3.7.0",
   "main": "index.js",
   "scripts": {
@@ -14,9 +14,9 @@
     "ESLint Config",
     "ESLint Config for sm.cn"
   ],
-  "author": [
-    "shuyu.mao",
-    "xuena.feng"
+  "author": "xuena.feng",
+  "contributors": [
+    "shuyu.mao"
   ],
   "license": "MIT",
   "bugs": {

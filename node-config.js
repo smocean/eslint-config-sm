@@ -53,9 +53,9 @@ module.exports = {
         'no-redeclare': 'warn',
         'no-unused-expressions': ['warn', {allowShortCircuit: true, allowTernary: true}],
         'no-useless-call': 'warn',
-        'no-with': 'error'
+        'no-with': 'error',
         // Strict Mode
-        'strict': ['error', 'safe']
+        'strict': ['error', 'safe'],
         // Variables
         'no-catch-shadow': 'warn',
         'no-delete-var': 'error',

@@ -47,7 +47,7 @@ module.exports = {
         'no-redeclare': 'warn',
         'no-unused-expressions': ['warn', {allowShortCircuit: true, allowTernary: true}],
         'no-useless-call': 'warn',
-        'no-with': 'error'
+        'no-with': 'error',
         // Strict Mode
         'strict': ['error', 'function'],
         // Variables
@@ -88,13 +88,13 @@ module.exports = {
         'keyword-spacing': ['error', {before: true, after: true}],
         'linebreak-style': ['error', 'unix'],
         'new-cap': ['error', {capIsNew: false}],
-        // 'newline-after-var': ['error', 'always'],
+        'newline-after-var': ['warn', 'always'],
         'no-array-constructor': ['error'],
         'no-multiple-empty-lines': ['error', {max: 1, maxBOF: 1, maxEOF: 1}],
         'no-new-object': ['error'],
         'no-restricted-syntax': ['error', 'WithStatement'],
         'no-spaced-func': ['error'],
-        'no-trailing-spaces': 'error',
+        'no-trailing-spaces': ['error',{ "skipBlankLines": true }],
         'object-curly-spacing': ['error', 'never', {
             objectsInObjects: false,
             arraysInObjects: false
