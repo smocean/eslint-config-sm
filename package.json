@@ -1,10 +1,13 @@
 {
   "name": "eslint-config-sm",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "ESLint config for sm.cn, base on ESLint v3.7.0",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "peerDependencies": {
+    "eslint": "^4.12.1"
   },
   "repository": {
     "type": "git",
@@ -22,5 +25,8 @@
   "bugs": {
     "url": "https://github.com/smocean/eslint-config-sm/issues"
   },
-  "homepage": "https://github.com/smocean/eslint-config-sm#readme"
+  "homepage": "https://github.com/smocean/eslint-config-sm#readme",
+  "dependencies": {
+    "eslint": "^4.12.1"
+  }
 }

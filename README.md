@@ -1,7 +1,7 @@
 
 ## 1. 安装 ESLint  ##
     
-    npm install -g eslint
+    npm install -g eslint@^4.12.1
 
 ## 2. ESLint rules for *SM* ##
 
